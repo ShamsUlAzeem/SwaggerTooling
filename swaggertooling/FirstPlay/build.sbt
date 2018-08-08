@@ -1,11 +1,13 @@
-name := "FirstPlay"
+name := """BookApplication"""
 
 version := "1.0-SNAPSHOT"
 
-libraryDependencies ++= Seq(
-  javaJdbc,
-  javaEbean,
-  cache
-)     
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
-play.Project.playJavaSettings
+scalaVersion := "2.11.11"
+
+libraryDependencies += javaJdbc
+libraryDependencies += cache
+libraryDependencies += javaWs
+libraryDependencies += "com.fasterxml.jackson.core" % "jackson-databind" % "2.6.3"
+

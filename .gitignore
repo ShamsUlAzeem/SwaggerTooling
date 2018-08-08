@@ -1,15 +1,10 @@
 .idea/
 *.iml
 swaggertooling/FirstPlay/logs
-swaggertooling/FirstPlay/project/project
-swaggertooling/FirstPlay/project/target
 swaggertooling/FirstPlay/target
-swaggertooling/FirstPlay/tmp
-swaggertooling/FirstPlay/.history
-swaggertooling/FirstPlay/dist
-swaggertooling/FirstPlay/out
+swaggertooling/FirstPlay/.idea
 swaggertooling/FirstPlay/.idea_modules
 swaggertooling/FirstPlay/.classpath
 swaggertooling/FirstPlay/.project
-swaggertooling/FirstPlay/RUNNING_PID
 swaggertooling/FirstPlay/.settings
+swaggertooling/FirstPlay/RUNNING_PID

@@ -1,8 +1,9 @@
 package models;
 
-import java.io.*;
-import java.util.*;
 
+import java.util.HashSet;
+import java.util.Set;
+//import com.avaje.ebean.Model;
 
 //A class that defines a Book. And instantiates a list of books for testing purpose.
 public class Book {
@@ -11,6 +12,9 @@ public class Book {
     public String title;
     public Integer price;
     public String author;
+    private static Set<Book> books;
+
+    public Book() { }
 
     public Book (Integer id, String title, String author, Integer price) {
         this.id = id;
@@ -19,11 +23,10 @@ public class Book {
         this.price = price;
     }
 
-    private static Set<Book> books;
     static {
         books = new HashSet<>();
-        books.add(new Book(1, "C++", "ABC", 20));
-        books.add(new Book(2, "Java", "DEF", 30));
+        books.add(new Book(2, "C++", "ABC", 20));
+        books.add(new Book(1, "Java", "DEF", 30));
     }
 
     public static Set<Book> allBooks() {

@@ -6,10 +6,18 @@
     </head>
     <body>
         <h1>All Books</h1>
+
         @for(book <- books) {
-            <h2><a href="#">@book.title</a></h2>
-            <p>@book.author</p>
-            <p>@book.price</p>
+            <p>ID: <b><a href="@routes.BooksController.show(book.id)">@book.id</a></b></p>
+            <p>
+            Title: <b><a href="@routes.BooksController.show(book.id)">@book.title</a></b>
+            , Price: <b>@book.price</b>
+            , Author: <b>@book.author</b>
+            </p>
+            <br>
+        }
+        @helper.form(action = routes.BooksController.create()) {
+            <input type="submit" value="Add Book"/>
         }
     </body>
 </html>
